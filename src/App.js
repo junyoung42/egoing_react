@@ -1,25 +1,40 @@
 import logo from './logo.svg';
-import './App.css';
 
-function App() {
+const Header = ()=>{
+ return<header>
+  <h1><a href="index.html">WEB</a></h1>
+</header>
+}
+const Nav = () =>{ 
+  return <nav>
+        <ul>
+            <li><a href="">html</a></li>
+            <li><a href="">css</a></li>
+            <li><a href="">js</a></li>
+        </ul>
+    </nav>
+}
+const Article = (props) =>{
+  
+  return <article>
+        <h2>{props.title}</h2>
+        {props.body}asd
+    </article>
+}
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Header></Header>
+    <Nav />
+    <Article title="어서오세요!" body="웹의 세계로 초대합니다."/>
+    
     </div>
-  );
-}
+  )}
+
 
 export default App;
+
+
+
+
+
