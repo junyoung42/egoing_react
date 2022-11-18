@@ -12,7 +12,7 @@ const Nav = ({topics}) =>{
   //   liTag.push(<li key={topics[i].id}><a href={"/read/"+topics[i].id}>{topics[i].title}</a></li>)
   // }
 
-  const liTag = topics.map((t) => <li key={t.id}><a href={"/read/" + t.id}> {t.title} </a></li>);
+  const liTag = topics.map((t) => <li key={t.id}><a href={"/read/" + t.id}> {t.id}.{t.title} <br /> {t.body} </a></li>);
 
   
   return <nav>
@@ -36,10 +36,10 @@ const App = () => {
   return (
     <div className="App">
     <Header title="웹" />
-    <Nav topics={topics} />
+    <Nav topics={topics} />  
     <Article title="어서오세요!" body="웹의 세계로 초대합니다." />
 
-{/* <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' /> */}
+<ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' width={"1000px"} />
 
     
     </div>
